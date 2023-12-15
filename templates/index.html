@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+    </head>
+    <body>
+        <div class="pepe">
+            <form class="login">
+                <label>Login</label>
+                <input type="text" name="login" placeholder="Enter login"><br>
+                <button>Submit</button>
+                {% if user %}
+                    <label class="username">Hi, {{ user }}</label>
+                {% endif %}
+            </form>
+        </div>
+    </body>
+</html>

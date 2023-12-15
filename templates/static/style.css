@@ -1,0 +1,58 @@
+html {
+    font-family: cursive;
+    font-size: 20px;
+    max-height: 800px;
+}
+.pepe {
+    margin-top: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: none;
+    border: solid 1px #000;
+    border-radius: 50px;
+    border-width: 2px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: antiquewhite;
+    align-items: center;
+}
+.login {
+    display: grid;
+    align-self: center;
+    vertical-align: middle;
+    min-width: none;
+}
+label {
+    text-align: center;
+    font-size: inherit;
+    margin-bottom: 3px;
+}
+input {
+    border: none;
+    border: solid 1px #000;
+    border-radius: 50px;
+    border-width: 2px;
+    font-size: inherit;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: rgb(230, 230, 230);
+}
+button {
+    margin-left: 35%;
+    margin-right: 35%;
+    border: none;
+    border: solid 1px #000;
+    border-width: 2px;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: rgb(197, 255, 195);
+    margin-top: 10px;
+}
+.username {
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
