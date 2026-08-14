@@ -1,0 +1,54 @@
+<?php 
+
+if (extension_loaded('zlib')) {
+    if (ob_get_level() > 0) ob_end_clean();  // 安全清理
+    ob_start('ob_gzhandler');
+} else {
+    if (ob_get_level() > 0) ob_end_clean();
+    ob_start();
+}
+
+include "./language/language.php"; 
+$main_title=$split_title;
+$main_desc=$split_zip_infor;
+$main_key=$split_key;
+$select_header="split";
+
+$loading_title=$split_loading_title;
+$loading_str=$split_loading_str;
+$filesuccess_title=$split_filesuccess_title;
+$download_title=$split_download_title;
+$return_title=$split_return_title;
+$reture_url="./split-zip";
+$make_page="split-zip";
+include "./ilovezip/head.php";?>
+</head>
+<body class="create-main merge-main lang<?php echo $lang;?>">
+    <?php 
+    include "./ilovezip/header.php";
+    include "./ilovezip/split-main.php";
+    include "./ilovezip/langset.php";
+    ?>
+        <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button"><svg class="icon icon16"><use xlink:href="#izip-delete"></use></svg></span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<?php
+/*当前页面代码底部*/
+//获取脚本执行完后在缓存中的代码
+$content = ob_get_contents();
+//进行去格式压缩代码
+$content = ltrim(rtrim(preg_replace(array("/> *([^ ]*) *</", "//", "'/\*[^*]*\*/'", "/\r\n/", "/\n/", "/\t/", '/>[ ]+</'), array(">\\1<", '', '', '', '', '', '><'), $content)));
+//清空关闭缓存，不直接输出到浏览器
+ob_end_clean();
+//输出到浏览器
+echo $content;
+?>
